@@ -1,23 +1,27 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import Navbar from "./components/Navbar";
+import Hero from "./components/Hero";
+import "@fortawesome/fontawesome-svg-core/styles.css";
+import SubHero from "./components/SubHero";
+import Services from "./components/Services";
+import DotContainerTop from "./components/DotContainers";
+import DotContainerBottom from "./components/DotContainers/bottom";
+import ProcessCard from "./components/ProcessCard";
+import Footer from "./components/Footer";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <Navbar />
+      <div style={{ width: "80%", margin: "auto" }}>
+        <Hero />
+        <SubHero />
+        <Services />
+        <DotContainerTop />
+        <ProcessCard />
+        <DotContainerBottom />
+        <Footer />
+      </div>
     </div>
   );
 }
